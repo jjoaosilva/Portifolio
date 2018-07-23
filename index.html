@@ -16,7 +16,7 @@
   
   <nav class="cor" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">J João Silva</a>
+      <a id="logo-container" href="#" class="brand-logo"><p class="flow-text" >J João Silva</p></a>
       <ul class="right hide-on-med-and-down">
           <li><a href="#MVP">MVP</a></li>
           <li><a href="#ivisual">Indentidade Visual</a></li>
@@ -41,8 +41,8 @@
       <div class="section">
         
       <div class="row">
-        <div class="col s12 m12 l12 center">
-            <img class="circle responsive-img" src="images/perfil.jpg">
+        <div class="col s6 m4 l4 offset-s3 offset-l4 offset-m4 center">
+            <img class="circle responsive-img" src="images/perfil2.jpeg">
         </div>
       </div>
 
@@ -74,7 +74,8 @@
           </p>
         </div>
       </div>
-      
+
+
       <div class="row">
         <div class="col s12 m6 l4">
           <div class="card">
@@ -327,7 +328,7 @@
 
 
   <div id="index-banner outros" class="parallax-container">
-    <div id="outros" class="parallax"><img class="responsive-img" src="images/capa3.jpg" alt="Unsplashed background img 1"></div>
+    <div id="outros" class=" parallax"><img class="responsive-img" src="images/capa3.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
   <div class="container">
@@ -407,15 +408,38 @@
   </div>
 
   <div class="fixed-action-btn">
-      <a class="btn-floating btn-large cor">
-        <i class="large material-icons">menu</i>
-      </a>
-      <ul>
-        <li><a href="#MVP" class="btn-floating red"><i class="material-icons">business_center</i></a></li>
-        <li><a href="#ivisual"class="btn-floating yellow darken-1"><i class="material-icons">fingerprint</i></a></li>
-        <li><a href="#outros"class="btn-floating green"><i class="material-icons">filter_vintage</i></a></li>
-      </ul>
+    <a class="btn-floating btn-large cor">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a href="#MVP" class="btn-floating red"><i class="material-icons">business_center</i></a></li>
+      <li><a href="#ivisual"class="btn-floating yellow darken-1"><i class="material-icons">fingerprint</i></a></li>
+      <li><a href="#outros"class="btn-floating green"><i class="material-icons">filter_vintage</i></a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="slider">
+        <ul class="slides">
+          <li> <img src="images/historia1/01-Atendimento.png">    </li>
+          <li> <img src="images/historia1/02-Job01.png">          </li>
+          <li> <img src="images/historia1/03-Job02.png">          </li>
+          <li> <img src="images/historia1/04-FinalJob.png">       </li>
+          <li> <img src="images/historia1/05-Casa.png">           </li>
+          <li> <img src="images/historia1/01-atendimento-01.png"> </li>
+          <li> <img src="images/historia1/02-FimJob-01.png">      </li>
+          <li> <img src="images/historia1/03-Casa-01.png">        </li>
+        </ul>
+      </div>
+
+      <div class="col s12 center">
+        <p class="center light">
+          Trabalho feito na faculdade: vantagens de se usar tecnologias no trabalhos.
+        </p>
+      </div>  
     </div>
+  </div>
 
   <footer class="page-footer cor">
     <div class="container">
@@ -446,9 +470,15 @@
       $(".button-collapse").sideNav();
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.slider');
+      var instances = M.Slider.init(elems, options);
+    });
+  
+  
     $(document).ready(function(){
-    $('.fixed-action-btn').floatingActionButton();
-  });
+      $('.slider').slider();
+    });
 
   </script>
   </body>
